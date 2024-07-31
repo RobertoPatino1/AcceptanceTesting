@@ -17,9 +17,9 @@ def list_all_tasks(todo_list:dict)->None:
     print("Tasks:")
     for task,status in todo_list.items():
         if status:
-            print(task+": Completed")
+            print("- "+task+": Completed")
         else:
-            print(task+": Pending")
+            print("- "+task+": Pending")
 
 
 def mark_task_as_completed(task:str,todo_list:dict)->bool:
