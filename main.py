@@ -1,6 +1,3 @@
-print("----------ToDo List----------")
-
-
 def add_task(task:str,todo_list:dict)->bool:
     if task=="":
         print("Error: Invalid task")
@@ -38,7 +35,7 @@ def clear_todo_list(todo_list:dict)->None:
 
 def remove_completed_tasks(todo_list:dict)->None:
     print("Removing all the completed tasks from the list...")
-    for task,status in todo_list.items():
+    for task,status in todo_list.copy().items():
         if status:
             todo_list.pop(task)
 
@@ -51,7 +48,3 @@ def change_task_back_to_pending(task:str, todo_list:dict)->bool:
     print("The given task was not in the todo list")
     return False
 
-
-todo_list = {}
-add_task("Buy Groceries",todo_list)
-list_all_tasks(todo_list)

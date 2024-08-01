@@ -3,7 +3,7 @@ from main import clear_todo_list,add_task
 to_do_list = {}
 @given('the to-do list contains tasks')
 
-def step_impl(context):
+def clear_step1_impl(context):
     # Add tasks to the todo list
     global to_do_list
     to_do_list = {}
@@ -12,13 +12,13 @@ def step_impl(context):
 
 # Step 2: When the user clears the to-do list
 @when('the user clears the to-do list')
-def step_impl(context):
+def clear_step2_impl(context):
     global to_do_list
     clear_todo_list(to_do_list)
 
 
 # Step 3: Then the to-do list should be empty
 @then('the to-do list should be empty')
-def step_impl(context):
+def clear_step3_impl(context):
     # Check if the task is in the to-do list
     assert len(to_do_list.keys())==0, f'Error clearing the todo list'

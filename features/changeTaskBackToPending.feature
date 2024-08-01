@@ -1,7 +1,7 @@
 Feature: Change a task back to pending
     @changeTaskBackToPending
     Scenario: Change a task back to pending
-        Given the to-do list contains tasks:  
+        Given the to-do list contains tasks to change completed ones back to pending:  
         | Task | Status |  
         | Buy groceries | Pending |  
         | Walk dog | Completed |  
