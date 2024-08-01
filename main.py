@@ -43,7 +43,7 @@ def remove_completed_tasks(todo_list:dict)->None:
             todo_list.pop(task)
 
 
-def change_back_to_pending(task:str, todo_list:dict)->bool:
+def change_task_back_to_pending(task:str, todo_list:dict)->bool:
     if task.capitalize() in todo_list.keys():
         todo_list[task.capitalize()] = False
         print("Succesfully changed the task back to Pending")
